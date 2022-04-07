@@ -1,7 +1,7 @@
 To create the execution context diagram consider the following:
 
 - Global and Function Execution Context
-- Different Phases Of Execution Context
+ 
 - Var let and const
 
 Create the execution context diagram of the following code line by line.
@@ -31,7 +31,7 @@ Create the execution context diagram of the following code line by line.
 
 ```js
 let marks = [34, 45, 56, 76];
-function multiplyArrayByN(arr, n) {
+function multiplyArrayByN(arr, n) { 
   let finalArr = [];
   for (let elm of arr) {
     finalArr.push(elm * 2);
