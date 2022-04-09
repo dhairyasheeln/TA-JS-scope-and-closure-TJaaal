@@ -15,13 +15,15 @@ function getCounter() {
     },
     value: function () {
       return privateCounter;
+
+      
     },
   };
 };
 
 let counter = getCounter()
 
-counter.value();  // output
+counter.value();  // 0
 counter.increment(); // output
 counter.increment(); // output
 counter.value(); // output
