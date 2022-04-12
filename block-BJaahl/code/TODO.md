@@ -3,6 +3,19 @@
 ```js
 function once(cb) {
   // your code goes here
+  let count=0;
+    return function(){
+      if(count==0){
+        cb();
+        alert("You can only call me once!");
+        count++;
+      }
+      else if(count==1){
+        count++;
+        alert("can't be called twice");
+        return undefined;
+      }
+    }
 }
 
 // TEST
@@ -17,8 +30,9 @@ log(); // return undefinde (can't be called twice)
 2. Change the above function in such a way that the function accepts two parameter a callback function and parameter for the callback function. When calling the function pass the parameters.
 
 ```js
-function once(cb) {
+function once(cb,param) {
   // your code goes here
+
 }
 
 // TEST
