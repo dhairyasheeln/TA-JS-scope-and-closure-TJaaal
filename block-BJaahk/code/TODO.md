@@ -7,6 +7,12 @@ The returned function accepts a sentence. If the sentence contains the `fromWord
 ```js
 function censor(fromWord, toWord) {
   //  Your code goes here
+  return function inner(sentence){
+    if(sentence.includes(fromWord)){
+      return sentence.replace(fromWord,toWord);
+    }
+    return sentence;
+  }
 }
 
 let censorSentence = censor('World', 'Sam');
@@ -26,6 +32,17 @@ The returned function either accepts two parameter or one parameter.
 ```js
 function multipleCensor() {
   //  Your code goes here
+  let temp=[];
+  return function inner(...args){
+    if(args.length==2){
+      temp.push(args);
+      return;
+    }
+    for(let i=0;i<args.length;i++){
+      let word=args[i];
+      args.replaceAll(word[0],word[1]);
+    }
+  }
 }
 
 let censorQuote = multipleCensor();
