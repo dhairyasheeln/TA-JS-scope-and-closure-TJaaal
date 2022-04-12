@@ -1,7 +1,17 @@
 1. Construct a function intersection that compares input arrays and returns a new array with elements found in all of the inputs. You can only use reduce method to do this.
 
 ```js
-function intersection(arrays) {}
+function intersection(...arrays) {
+  let first=arrays[0];
+  let final=[];
+  first.reduce((acc,cv)=>{
+    if(acc.includes(cv))
+    {
+      final.push(cv);
+    }
+  },arrays[i]);
+
+}
 
 // Test
 console.log(
